@@ -1,0 +1,25 @@
+{
+  "name": "puppetter-github-example",
+  "version": "1.0.0",
+  "description": "Puppetter example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zac11/puppetter-github-example.git"
+  },
+  "keywords": [
+    "e2e"
+  ],
+  "author": "RY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zac11/puppetter-github-example/issues"
+  },
+  "homepage": "https://github.com/zac11/puppetter-github-example#readme",
+  "dependencies": {
+    "puppeteer": "^1.5.0"
+  }
+}
