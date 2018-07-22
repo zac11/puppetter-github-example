@@ -12,4 +12,4 @@ I have omitted the part where the changes are being saved in the Mongo database.
 
 * Clone the repository.
 * Run `npm i` to install dependencies.
-* Run `node index.js` to run the file tests.
+* Run `node index.js` to run the test files.
