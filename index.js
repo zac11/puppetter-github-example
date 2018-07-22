@@ -57,30 +57,32 @@ async function run() {
         for(let i=1;i<=listLength;i++){
 
             //replace the INDEX with the actual number;
-            let userName = LIST_EMAIL_SELECTOR.replace('INDEX',i);
-            console.log(userName);
+            let userName = LIST_USERNAME_SELECTOR.replace('INDEX',i);
+            //console.log(userName);
             let email = LIST_EMAIL_SELECTOR.replace('INDEX',i);
-            console.log(email);
-/*
-            let usernameofperson = await page.evaluate((sel)=>{
-                return document.querySelector(sel).getAttribute('href').replace('/','');
-            },userName);*/
+            //console.log(email);
+
+            let usernameSelector = LIST_USERNAME_SELECTOR.replace("INDEX", i);
+            let emailSelector = LIST_EMAIL_SELECTOR.replace("INDEX", i);
+
 
             let usernameofperson = await page.evaluate((sel)=>{
                 return document.querySelector(sel).getAttribute('href').replace('/', '');
-            },userName);
+            }, userName);
 
             let emailofUser = await page.evaluate((sel)=>{
                 let element = document.querySelector(sel);
                 return element ? element.innerHTML : null;
-            },email);
+            }, email);
 
             //if there is no email for user, then continue
-            if(!email)
+            if (!emailofUser)
                 continue;
 
-            console.log(usernameofperson +' has email ---> '+emailofUser);
+            console.log(usernameofperson, ' -> ', emailofUser);
         }
+        
+
     }
     
 
